@@ -1,0 +1,56 @@
+<div id="form">
+    <form  style="padding: 4rem 16rem;" onsubmit="sendMail();" return>
+        <h1 id="formTitle">You are just one step away to get your quote.</h1>
+        <label for="formTitle">* Indicates required field</label>
+        <hr style="margin-top: 1rem; width: 70%;">
+        <div class="mb-3 ">
+          <h4 class="form-label mb-3">Name & Birthdate</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between; gap: .5em;">
+            <input id="inpt_firstName" type="text" class="form-control mb-2" placeholder="First Name*" name="firstName">
+            <input id="inpt_middleName" type="text" class="form-control mb-2" placeholder="MI" name="middleName" maxlength="1" style="width: 3em;text-align: center;">
+            <input id="inpt_lastName" type="text" class="form-control mb-2" placeholder="Last Name*" name="lastName">
+            <select class="form-select mb-2" aria-label="Default select example"  aria-placeholder="Sufix" name="Sufix" style="width: 5em;">
+              <option selected></option>
+              <option value="1">Jr</option>
+              <option value="2">Sr</option>
+              <option value="3">I</option>
+              <option value="3">II</option>
+              <option value="3">III</option>
+              <option value="3">IV</option>
+            </select>
+          </div>
+          <input id="inpt_dateOfBirth" type="date" class="form-control mb-2" style="width: 20em;" placeholder="Date of birth*" aria-describedby="emailHelp" name="dateOfBirth">
+          <br>
+          <h4 class="form-label mb-3">Mailing Address</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between; gap: .5em;">
+            <input id="inpt_ma_streetNumber" type="text" class="form-control mb-2" placeholder="Street number and name*">
+            <input id="inpt_ma_aptUnit" type="text" class="form-control mb-2" placeholder="Apt/Unit #" style="width: 30%;">
+          </div>
+          <div style="display: flex; flex-direction: row; justify-content: space-between; gap: .5em;">
+            <input id="inpt_ma_city" type="text" class="form-control mb-2" placeholder="City*"> 
+            <input id="inpt_ma_postalCode" type="text" class="form-control mb-2" placeholder="Postal code" maxlength="5" onkeypress="return isNumberKey(event)" style="width: 30%;">
+          </div>
+          <br>
+          <h4 class="form-label mb-3">Parking Address</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between; gap: .5em;">
+            <input id="inpt_pa_streetNumber" type="text" class="form-control mb-2" placeholder="Street number and name*">
+            <input id="inpt_pa_atpUnit" type="text" class="form-control mb-2" placeholder="Apt/Unit #" style="width: 30%;">
+          </div>
+          <div style="display: flex; flex-direction: row; justify-content: space-between; gap: .5em;">
+            <input id="inpt_pa_city" type="text" class="form-control mb-2" placeholder="City*"> 
+            <input id="inpt_pa_postalCode" type="text" class="form-control mb-2" placeholder="Postal code" maxlength="5" minlength="5" onkeypress="return isNumberKey(event)" style="width: 30%;">
+          </div>
+          <h4 class="form-label mb-3 mt-3">Phone number & E-mail</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between; gap: .5em;">
+            <input id="inpt_email" type="email" class="form-control mb-2" placeholder="E-mail*" id="email" aria-describedby="emailHelp" name="E-mail">
+            <input id="inpt_phoneNumber" type="text" class="form-control mb-2" placeholder="Phone number*" onkeypress="return isNumberKey(event)">
+            <input id="inpt_usdDot" type="text" class="form-control mb-2" placeholder="USD DOT#" onkeypress="return isNumberKey(event)" style="width: 35%;">
+          </div>
+        </div>
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div> -->
+        <button type="submit" class="btn" style="border-radius: 0px; background-color: #0a1423; color: white;" onclick="sendMail()">Submit my quote</button>
+    </form>
+</div>
